@@ -1,29 +1,30 @@
-/* @import url("https://fonts.googleapis.com/css?family=Fira+Mono&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Fira+Mono&display=swap"); */
 
-* {
-    font-family: "Fire Mono", monospace, sans-serif;
-} */
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+} 
 
 html {
     height: 100%;
-    width:  100%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     line-height: 1.6;
-    background: white;
-    padding: 0%;
-    margin: 0%;
-    min-height: 100vh;
+    background-color: white;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
+  min-height: 100vh;
   display: grid;
-  grid-template-rows: 60px 60px auto 60px;
+  justify-items: center;
+  grid-template-rows: 100px 100px auto 100px;
   grid-template-areas: 
   "projectTitle"
   "bookButton"
@@ -39,6 +40,14 @@ body {
 
 .footer {grid-area: footer;}
 
+
+/* PROJECT TITLE */
+.projectTitle {
+  padding: 0;
+  margin: 0;
+}
+
+/* BOOK BUTTON */
 .bookButton #modalBtn {
   background: coral;
   padding: 1em 2em;
@@ -50,6 +59,32 @@ body {
   transition: 0.5s;
 }
 
+/* BOOKS */
+.book {
+  width: 200px;
+  height: 200px;
+  background: lightgray;
+}
+
+.book:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* FOOTER */ 
+.footer {
+  display: inline-flex;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -85,7 +120,6 @@ body {
 .books {
   width: 100%;
   height: 100%;
-  margin: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
