@@ -109,7 +109,7 @@ body {
 
 .footer img:hover {
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: all 0.3s ease;
 }
 
 /* MODAL */
@@ -126,26 +126,28 @@ body {
 }
 
 .modal-header h2{
-  margin: 10px;
+  margin: 15px;
 }
 
 .modalContent { 
   background-color: white;
   margin: 20% auto;
-  padding: 20px;
+  padding: 1px;
   width: 50%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
 
 .closeBtn {
+  line-height: 0.7em ; 
   color:black;
   float: right;
   font-size: 40px;
+  margin: 15px;
 }
 
 .closeBtn:hover, .closeBtn:focus {
-  color: #000;
-  text-decoration: none;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -211,5 +213,41 @@ body {
 
 .read-container {
   margin: 20px;
+  margin-top: 40px;
   font-size: 20px;
+}
+
+#read-input {
+  margin: 7px;
+  transform: scale(1.5);
+}
+
+#pages-input {
+  margin-bottom: 2px;
+}
+
+#pages-input::-webkit-outer-spin-button,
+#pages-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.submit-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.submit-button {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  background: white;
+  border: 1.5px solid black;
+  padding: 0.5em 1em;
+}
+
+.submit-button:hover {
+transform: scale(1.1);
+background: black;
+color: white;
+transition: all 0.3s ease;
 }

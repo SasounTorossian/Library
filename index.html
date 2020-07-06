@@ -45,7 +45,7 @@
           </div>
 
           <div class="form-container" id="pages-form">
-            <input type=text name="pages" class="input-container" id="pages-input" autocomplete="off" required>
+            <input type=number name="pages" class="input-container" id="pages-input" autocomplete="off" required>
             <label for="pages" class="label-container" id="pages-label">
               <span class="span-container" id="pages-span">Pages</span>
             </label>
@@ -57,7 +57,7 @@
           </div>
 
           <div class="submit-container" id="submit-form">
-            <button type="submit" class="modalSubmitBtn">Submit</button>
+            <button type="submit" class="submit-button">Submit</button>
           </div>
         </form>
       </div>
@@ -177,7 +177,7 @@
       // Get close button
       const closeBtn = document.querySelector(".closeBtn")
       // Get modal submit button
-      const submitBtn = document.querySelector(".modalSubmitBtn")
+      const submitBtn = document.querySelector(".submit-button")
 
       // Listen for open click 
       modalBtn.addEventListener('click', openModal)
