@@ -62,13 +62,13 @@ body {
   background: white;
   padding: 0.5em 1em;
   border: 1.5px solid black;
+  transition: all 0.3s ease;
 }
 
 .bookButton #modalBtn:hover {
   transform: scale(1.1);
   background: black;
   color: white;
-  transition: all 0.3s ease;
 }
 
 /* BOOKS */
@@ -87,11 +87,11 @@ body {
   height: 297px;
   margin: 15px;
   border: 1.5px solid black;
+  transition: all 0.3s ease;
 }
 
 .book:hover {
   transform: scale(1.1);
-  transition: all 0.3s ease;
 }
 
 /* FOOTER */ 
@@ -107,9 +107,12 @@ body {
   font-size: 25px;
 }
 
+.footer img {
+  transition: all 0.3s ease;
+}
+
 .footer img:hover {
   transform: scale(1.1);
-  transition: all 0.3s ease;
 }
 
 /* MODAL */
@@ -143,11 +146,11 @@ body {
   float: right;
   font-size: 40px;
   margin: 15px;
+  transition: all 0.3s ease;
 }
 
 .closeBtn:hover, .closeBtn:focus {
   transform: scale(1.1);
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -243,11 +246,11 @@ body {
   background: white;
   border: 1.5px solid black;
   padding: 0.5em 1em;
+  transition: all 0.3s ease;
 }
 
 .submit-button:hover {
 transform: scale(1.1);
 background: black;
 color: white;
-transition: all 0.3s ease;
 }
