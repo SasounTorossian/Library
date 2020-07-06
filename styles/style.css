@@ -68,7 +68,7 @@ body {
   transform: scale(1.1);
   background: black;
   color: white;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 /* BOOKS */
@@ -83,15 +83,15 @@ body {
 }
 
 .book {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
+  width: 210px;
+  height: 297px;
+  margin: 15px;
   border: 1.5px solid black;
 }
 
 .book:hover {
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: all 0.3s ease;
 }
 
 /* FOOTER */ 
@@ -138,9 +138,9 @@ body {
 }
 
 .closeBtn {
-  color: #ccc;
+  color:black;
   float: right;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .closeBtn:hover, .closeBtn:focus {
@@ -149,35 +149,36 @@ body {
   cursor: pointer;
 }
 
-.titleForm {
+.form-container {
   position: relative;
-  width: 50%;
+  width: 90%;
   height: 50%;
   overflow: hidden;
   margin: 20px;
 }
 
-.titleInput {
+.input-container {
   width: 100%;
   height: 100%;
   color: black;
   padding-top: 20px;
   border: none;
   outline: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 
-.titleLabel {
+.label-container {
   position: absolute;
   bottom: 0px;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
+  font-size: 20px;
   border-bottom: 0.5px solid gray;
 }
 
-.titleLabel::after {
+.label-container::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -189,21 +190,26 @@ body {
   transition: all 0.3s ease;
 }
 
-.titleSpan {
+.span-container {
   position: absolute;
   bottom: 1px;
   left: 0px;
   transition: all 0.3s ease;
 }
 
-.titleInput:focus + .titleLabel .titleSpan, 
-.titleInput:valid + .titleLabel .titleSpan{
+.input-container:focus + .label-container .span-container, 
+.input-container:valid + .label-container .span-container{
   transform: translateY(-100%);
   font-size: 16px;
   color: gray;
 }
 
-.titleInput:focus + .titleLabel::after, 
-.titleInput:valid + .titleLabel::after {
+.input-container:focus + .label-container::after, 
+.input-container:valid + .label-container::after {
   transform: translateX(0%);
+}
+
+.read-container {
+  margin: 20px;
+  font-size: 20px;
 }

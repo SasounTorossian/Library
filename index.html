@@ -27,28 +27,36 @@
       <div class="modalContent">
         <span class="closeBtn">&times;</span>
         <div class="modal-header">
-          <h2>Add Book</h2>
+          <h2>Book Details</h2>
         </div>
         <form class="modalForm"> 
-          <div class="titleForm">
-            <input type=text name="title" class="titleInput" autocomplete="off" required>
-            <label for="title" class="titleLabel">
-              <span class="titleSpan">Title</span>
+          <div class="form-container" id="title-form">
+            <input type=text name="title" class="input-container" id="title-input" autocomplete="off" required>
+            <label for="title" class="label-container" id="title-label">
+              <span class="span-container" id="title-span">Title</span>
             </label>
           </div>
-          <div class="block">
-            <label>Author's name:</label>
-            <input type=text class="formAuthor">
+
+          <div class="form-container" id="author-form">
+            <input type=text name="author" class="input-container" id="author-input" autocomplete="off" required>
+            <label for="author" class="label-container" id="title-label">
+              <span class="span-container" id="author-span">Author</span>
+            </label>
           </div>
-          <div class="block">
-            <label>Number of pages:</label>
-            <input type=text class="formPages">
+
+          <div class="form-container" id="pages-form">
+            <input type=text name="pages" class="input-container" id="pages-input" autocomplete="off" required>
+            <label for="pages" class="label-container" id="pages-label">
+              <span class="span-container" id="pages-span">Pages</span>
+            </label>
           </div>
-          <div class="block">
+    
+          <div class="read-container" id="read-form">
             <label>Already read?</label>
-            <input type="checkbox" class="formRead">
+            <input type="checkbox" class="input-container-checkbox" id="read-input">
           </div>
-          <div class="block">
+
+          <div class="submit-container" id="submit-form">
             <button type="submit" class="modalSubmitBtn">Submit</button>
           </div>
         </form>
@@ -193,10 +201,10 @@
 
       // Function to submit modal form and create new book
       function submitModal(){
-        let title = document.querySelector('.formTitle').value
-        let author = document.querySelector('.formAuthor').value
-        let pages = document.querySelector('.formPages').value
-        let read = document.querySelector('.formRead').checked
+        let title = document.querySelector('#title-input').value
+        let author = document.querySelector('#author-input').value
+        let pages = document.querySelector('#pages-input').value
+        let read = document.querySelector('#read-input').checked
         if (stringCleanup(title) == '' || 
             stringCleanup(author) == '' || 
             stringCleanup(pages) == '' || 
