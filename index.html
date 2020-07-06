@@ -155,7 +155,7 @@
         const index = parentElement.getAttribute("id")
         myLibrary[index].read = !myLibrary[index].read
         parentElement.querySelector(".read").textContent = myLibrary[index].read ? 'Read' : 'Not Read'
-        render()
+        saveToLocalStorage()
       }
 
       // Get modal element
