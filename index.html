@@ -29,10 +29,12 @@
         <div class="modal-header">
           <h2>Add Book</h2>
         </div>
-        <form class="modalForm" name="modalForm"> 
-          <div class="block">
-            <label>Title:</label>
-            <input type=text class="formTitle">
+        <form class="modalForm"> 
+          <div class="titleForm">
+            <input type=text name="title" class="titleInput" autocomplete="off" required>
+            <label for="title" class="titleLabel">
+              <span class="titleSpan">Title</span>
+            </label>
           </div>
           <div class="block">
             <label>Author's name:</label>
