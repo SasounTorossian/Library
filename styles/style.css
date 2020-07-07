@@ -83,15 +83,64 @@ body {
 }
 
 .book {
+  position: relative;
   width: 210px;
   height: 297px;
-  margin: 15px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  margin: 25px;
   border: 1.5px solid black;
   transition: all 0.3s ease;
 }
 
 .book:hover {
   transform: scale(1.1);
+  background: black;
+  color: white;
+}
+
+.book .title {
+  font-size: 25px; 
+  margin: 15px;
+  margin-bottom: 25px;
+}
+
+.book .author { 
+  margin: 20px;
+}
+
+.book .pages { 
+  margin: 15px;
+}
+
+.book .pages { 
+  margin: 15px;
+}
+
+.book .delete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  padding-right: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  line-height: 1.4em;
+  opacity: 0;
+}
+
+.book:hover .delete {
+  transform: translateY(-1.35em);
+  color: black;
+  opacity: 1;
+}
+
+.book:hover .delete:hover {
+  left: 2px;
+  transform: translateY(-1.35em) scale(1.3);
+  color: black;
+  opacity: 1;
 }
 
 /* FOOTER */ 
