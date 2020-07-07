@@ -198,9 +198,13 @@ body {
 }
 
 .modalContent { 
+  position: absolute;
   background-color: white;
-  margin: 20% auto;
+  margin: auto;
   padding: 1px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 50%;
   border: 1.5px solid black;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
