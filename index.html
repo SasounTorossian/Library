@@ -138,21 +138,35 @@
           toggleBtn.textContent = "Toggle read"
           toggleBtn.addEventListener('click', toggleRead)
 
+          const optionBar = document.createElement("div")
+          optionBar.classList.add("optionBar")
+          optionBar.appendChild(toggleBtn)
+          optionBar.appendChild(deleteBtn)
+
           // Append all children to newBook element, append newBook element to books container 
           newBook.appendChild(title)
           newBook.appendChild(author)
           newBook.appendChild(pages)
           newBook.appendChild(read)
-          newBook.appendChild(deleteBtn)
-          newBook.appendChild(toggleBtn)
+          newBook.appendChild(optionBar)
+          // newBook.appendChild(deleteBtn)
+          // newBook.appendChild(toggleBtn)
           books.appendChild(newBook)
 
         })
       }
 
+      // Function expression to find closest element which contains class. starts from 'elem' parameter, and moves up to each parent node until 'classSelector' class found
+      let getCLosestClass = function(elem, classSelector) {
+        for( ; elem && elem !== document; elem = elem.parentNode) {
+          if(elem.classList.contains(classSelector)) return elem
+        }
+        return null
+      }
+
       // Delete particular book by splicing out and re-rendering
       function deleteBook(e) {
-        let parentElement = e.target.parentElement
+        let parentElement = getCLosestClass(e.target, "book")
         const index = parentElement.getAttribute("id")
         parentElement.innerHTML = ''
         myLibrary.splice(index, 1)
@@ -161,7 +175,7 @@
 
       // Toggle read status of book, and then re-render
       function toggleRead(e) {
-        let parentElement = e.target.parentElement
+        let parentElement = getCLosestClass(e.target, "book")
         const index = parentElement.getAttribute("id")
         myLibrary[index].read = !myLibrary[index].read
         parentElement.querySelector(".read").textContent = myLibrary[index].read ? 'Read' : 'Not Read'
