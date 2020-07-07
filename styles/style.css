@@ -159,54 +159,6 @@ body {
   opacity: 1;
 }
 
-
-
-/* .book .delete {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 20px;
-  padding-left: 10px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  line-height: 1.4em;
-  opacity: 0;
-}
-
-.book:hover .delete {
-  transform: translateY(-1.35em);
-  color: black;
-  opacity: 1;
-}
-
-.book:hover .delete:hover {
-  right: 2px;
-  transform: translateY(-1.35em) scale(1.3);
-  color: black;
-  opacity: 1;
-}
-
-.book .toggle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 20px;
-  transition: all 0.3s ease;
-  line-height: 1.4em;
-}
-
-.book:hover .toggle {
-  transform: translateY(-1.35em);
-  color: black;
-  opacity: 1;
-}
-
-.book:hover .toggle:hover {
-  transform: translateY(-1.35em) scale(1.1);
-  color: black;
-  opacity: 1;
-} */
-
 /* FOOTER */ 
 .footer {
   display: flex;
@@ -250,6 +202,7 @@ body {
   margin: 20% auto;
   padding: 1px;
   width: 50%;
+  border: 1.5px solid black;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
 
