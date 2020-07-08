@@ -8,11 +8,7 @@
 </head>
 <body>
     <div class="container">
-      <h1 class="projectTitle">Library</h1>
-
-      <div class="bookButton">
-        <button id="modalBtn">Add Book</button>
-      </div>
+      <h1 class="projectTitle">MyLibrary</h1>
 
       <div class="books"></div>
 
@@ -149,11 +145,21 @@
           newBook.appendChild(pages)
           newBook.appendChild(read)
           newBook.appendChild(optionBar)
-          // newBook.appendChild(deleteBtn)
-          // newBook.appendChild(toggleBtn)
           books.appendChild(newBook)
-
         })
+
+        // Append add new book card to DOM. Clicking on card will open modal form to add new book.
+        const newAddBook = document.createElement("div")
+        newAddBook.classList.add("book")
+        newAddBook.classList.add("bookAddCard")
+        newAddBook.addEventListener('click', openModal)
+
+        const addCard = document.createElement("div")
+        addCard.classList.add("addCard")
+        addCard.textContent = "+"
+
+        newAddBook.appendChild(addCard)
+        books.appendChild(newAddBook )
       }
 
       // Function expression to find closest element which contains class. starts from 'elem' parameter, and moves up to each parent node until 'classSelector' class found
@@ -186,15 +192,11 @@
       const modal = document.querySelector("#myModal")
       // Get modal form 
       const modalForm = document.querySelector(".modalForm")
-      // Get open modal button
-      const modalBtn = document.querySelector("#modalBtn")
       // Get close button
       const closeBtn = document.querySelector(".closeBtn")
       // Get modal submit button
       const submitBtn = document.querySelector(".submit-button")
 
-      // Listen for open click 
-      modalBtn.addEventListener('click', openModal)
       // Listen for close click 
       closeBtn.addEventListener('click', closeModal)
       // Listen for outside click
