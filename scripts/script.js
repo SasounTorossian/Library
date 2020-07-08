@@ -180,14 +180,14 @@ function saveToLocalStorage() {
 
 // Load library from storage
 function loadFromLocalStorage(){
-    let loadedLibary = JSON.parse(localStorage.getItem('books'))
+    let loadedLibrary = JSON.parse(localStorage.getItem('books'))
     // If empty library, load the default books and update library array, else, update library array with previous session library
-    if(loadedLibary === undefined || loadedLibary.length == 0){
+    if(loadedLibrary === null || loadedLibrary === undefined || loadedLibrary.length == 0){
         loadDefaultBooks()
         localStorage.setItem("books", JSON.stringify(myLibrary))
     }
     else {
-        myLibrary = loadedLibary
+        myLibrary = loadedLibrary
     }
 }
 
