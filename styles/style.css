@@ -69,7 +69,7 @@ body {
   font-size: 20px;
   text-align: center;
   line-height: 40px;
-  margin: 25px;
+  margin: 25px 10px;
   border: 1.5px solid black;
   transition: all 0.3s ease;
 }
@@ -82,23 +82,23 @@ body {
 
 .book .title {
   flex: 2;
-  margin: 10px; 
-  font-size: 25px;
+  font-size: 27px;
+  margin: 7px;
 }
 
 .book .author { 
   flex: 2;
-  margin: 0 10px; 
+  margin: 0px 5px;
 }
 
 .book .pages { 
   flex: 0.5;
-  margin: 0 10px; 
+  margin: 0px 5px;
 }
 
 .book .read { 
   flex: 0.5;
-  margin: 0 10px; 
+  margin: 0px 5px;
 }
 
 .book .optionBar {
@@ -265,6 +265,7 @@ body {
 .input-container:focus + .label-container .span-container, 
 .input-container:valid + .label-container .span-container{
   transform: translateY(-100%);
+  left: 0px;
   font-size: 16px;
   color: gray;
 }
