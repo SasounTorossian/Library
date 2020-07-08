@@ -63,11 +63,13 @@ function render(){
 
         const deleteBtn = document.createElement("div")
         deleteBtn.classList.add("delete")
+        deleteBtn.classList.add("disable-select")
         deleteBtn.textContent = '\u2715'
         deleteBtn.addEventListener('click', deleteBook)
 
         const toggleBtn = document.createElement("div")
         toggleBtn.classList.add("toggle")
+        toggleBtn.classList.add("disable-select")
         toggleBtn.textContent = "Toggle read"
         toggleBtn.addEventListener('click', toggleRead)
 
@@ -93,6 +95,7 @@ function render(){
 
     const addCard = document.createElement("div")
     addCard.classList.add("addCard")
+    addCard.classList.add("disable-select")
     addCard.textContent = "+"
 
     newAddBook.appendChild(addCard)
