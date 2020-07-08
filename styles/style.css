@@ -62,6 +62,8 @@ body {
 
 .book {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 210px;
   height: 297px;
   font-size: 20px;
@@ -79,21 +81,24 @@ body {
 }
 
 .book .title {
-  font-size: 25px; 
-  margin: 15px;
-  margin-bottom: 25px;
+  flex: 2;
+  margin: 10px; 
+  font-size: 25px;
 }
 
 .book .author { 
-  margin: 20px;
+  flex: 2;
+  margin: 0 10px; 
 }
 
 .book .pages { 
-  margin: 15px;
+  flex: 0.5;
+  margin: 0 10px; 
 }
 
-.book .pages { 
-  margin: 15px;
+.book .read { 
+  flex: 0.5;
+  margin: 0 10px; 
 }
 
 .book .optionBar {
@@ -180,10 +185,6 @@ body {
   width: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.3);
-}
-
-.modal-header h2{
-  margin: 15px;
 }
 
 .modalContent { 
