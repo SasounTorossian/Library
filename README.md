@@ -1,5 +1,5 @@
 # Library
-Library app based off the Odin Project curriculum. Users can add and remove books they have in their library. Books can be toggle betwen read and non-read modes. Live demo can be found on github.io [here](https://sasountorossian.github.io/Library/).
+Library app based off the Odin Project curriculum. Users can add and remove books they have in their library. Books can be toggled betwen read and non-read modes. Live demo can be found on github.io [here](https://sasountorossian.github.io/Library/).
 
 ![Library demonstration](Library.gif)
 
